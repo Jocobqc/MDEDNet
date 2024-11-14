@@ -5,7 +5,7 @@ from dataset import dataset_loader
 from model.model_full import MDEDNet
 
 if __name__ == '__main__':    
-    model_path = os.path.join('checkpoints/epoch_131.pth')
+    model_path = os.path.join('checkpoints/mded.pth')
     device = torch.device('cuda:0') 
     model = MDEDNet().to(device)
     print('model parameters: [%.2f] M'%(sum(param.numel() for param in model.parameters())/1e6))
